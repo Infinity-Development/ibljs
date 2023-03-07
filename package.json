@@ -1,0 +1,21 @@
+{
+  "name": "ibljs",
+  "version": "1.0.4",
+  "description": "",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "gentypings": "npx openapi-typescript https://spider.infinitybots.gg/openapi --output src/typings.d.ts --path-params-as-types --immutable-types",
+    "postinstall": "npm run gentypings"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^3.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.14.6",
+    "typescript": "^4.9.5"
+  }
+}
